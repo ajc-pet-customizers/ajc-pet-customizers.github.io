@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AJC Pet Customizers</title>
+<style>
+@font-face {
+  font-family: b;
+  src: url("fonts/brownies cake.ttf");
+}
+
+@font-face {
+  font-family: doodle;
+  src: url("fonts/Little pinky doodles.ttf");
+}
+
+@font-face {
+  font-family: belle;
+  src: url("fonts/Georgia Belle.ttf");
+}
+
+@font-face {
+  font-family: orion;
+  src: url("fonts/orion sans.ttf");
+}
+
+@font-face {
+  font-family: body;
+  src: url("fonts/HandwritingCR-2.ttf");
+}
+
+/* override browser default */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* use viewport-relative units to cover page fully */
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+/* include border and padding in element width and height */
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display:grid;
+  position:absolute;
+  top:20%;
+  width:100%;
+}
+
+.header {
+  z-index:100;
+  display: flex;
+  /*background-image: url("rainbow header2.svg");*/
+  background-image: linear-gradient(to right,#ff8080, #ffc375, #fff875, #b3ff75, #75ffe8,#75daff,#d89eff);
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-position: center center;
+  color: #3b3b3b;
+  font-family: b;
+  width:100%;
+  height: 16%;
+  top: 0px;
+  left: 0px;
+  position:fixed;
+  font-size:420%;
+  align-items: center;
+  justify-content: center;
+  padding: 2%;
+  box-shadow: 0px 3px 3px rgba(163, 163, 163,0.5);
+}
+
+.text_outline {
+  text-shadow:
+    -1px -1px 0 white,
+     0   -1px 0 white,
+     1px -1px 0 white,
+     1px  0   0 white,
+     1px  1px 0 white,
+     0    1px 0 white,
+    -1px  1px 0 white,
+    -1px  0   0 white, /* */
+    -2px -2px 0 white,
+     0   -2px 0 white,
+     2px -2px 0 white,
+     2px  0   0 white,
+     2px  2px 0 white,
+     0    2px 0 white,
+    -2px  2px 0 white,
+    -2px  0   0 white;
+}
+
+.button_grid {
+  display:grid;
+  grid-gap: 8%;
+  grid-template-columns: 40% 40%;
+  grid-template-rows: auto;
+  justify-content: center;
+  align-content: center;
+  padding: 2.5%;
+  width:100%;
+  height:auto;
+}
+
+.button {
+  background-color: white;
+  padding:3%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-family: body;
+  font-size: 300%;
+  color:#3b3b3b;
+  border-radius:100px;
+  border: 8px solid transparent;
+  box-shadow: 3px 3px 3px rgba(163, 163, 163,0.5);
+  cursor:pointer;
+}
+
+.button:active {
+  box-shadow: 3px 3px 3px rgba(64, 64, 64,0.5);
+  transform: translateY(6px);
+}
+
+.b1 {
+  background: 
+     linear-gradient(white,white) padding-box,
+     linear-gradient(to right,#ff8080, #ffc375, #fff875, #b3ff75) border-box;
+}
+
+.b1:hover {
+  background-image:linear-gradient(to right,#ff8080, #ffc375, #fff875, #b3ff75);
+  background: 
+     linear-gradient(to right,#ff8080, #ffc375, #fff875, #b3ff75) border-box;
+}
+
+.b2 {
+  background: 
+     linear-gradient(white,white) padding-box,
+     linear-gradient(to right, #b3ff75, #75ffe8,#75daff,#d89eff) border-box;
+}
+
+.b2:hover {
+  background-image:linear-gradient(to right,#b3ff75, #75ffe8,#75daff,#d89eff);
+background: 
+     linear-gradient(to right, #b3ff75, #75ffe8,#75daff,#d89eff) border-box;
+}
+
+p {
+  font-family:body;
+  color:#3b3b3b;
+  font-size:185%;
+  margin:1% 10%;
+  text-align:center;
+  line-height: 1.6;
+}
+
+.subhead {
+  font-family:belle;
+  font-size:300%;
+  color:#3b3b3b;
+  text-align:center;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom,#ff8080, #ffc375, #fff875, #b3ff75, #75ffe8,#75daff,#d89eff); 
+  border-radius: 10px;
+  /*box-shadow: inset 5px 0 5px rgba(255,255,255,.3); */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  box-shadow: inset 5px 0 1000px rgba(255,255,255,.3); 
+}
+
+::selection {
+  background: #b3ff75; 
+}
+
+a {
+  background: -webkit-linear-gradient(left,#ff8080, #ffc375, #fff875, #b3ff75, #75ffe8,#75daff,#d89eff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight:1000;
+}
+
+a:hover {
+  box-shadow: inset 5px 0 1000px rgba(255,255,255,.3); 
+}
+
+</style>
+</head>
+
+<body>
+<div class="container">
+<div class="header text_outline"><span style="font-family:doodle;font-size:80%">Y</span>AJC Pet Customizers<span style="font-family:doodle;font-size:80%">Z</span></div>
+<div class="subhead">Current Customizers</div>
+<div class="button_grid">
+<button class="button b1 text_outline" onclick="window.open(
+  'https://ajc-pet-customizers.github.io/hopper','_blank');"><img src="assets/rainbow hopper outlined.png" alt="hopper" width="30%" height ="auto">Hopper</button>
+<button class="button b2 text_outline" onclick="window.open(
+  'https://ajc-pet-customizers.github.io/phantom','_blank');"><img src="assets/rainbow phantom outline.png" alt="phantom" width="30%" height ="auto">Phantom</button>
+</div>
+<div class="subhead">About</div>
+<p>
+Welcome! This website contains pet customizers created by me, <a href="https://aj-item-worth.fandom.com/wiki/User:BrightSunshine" target="_blank">BrightSunshine</a>, for use with the game Animal Jam Classic. They're completely safe and free to use, but please look over the <a href="#usage">Usage Policy</a> below for my conditions before continuing. I'm always working on adding more so stay tuned! ^-^
+</p>
+<br>
+<div class="subhead">Navigation & Features </div>
+<p>
+Use the respective buttons to select features for the pet. Click the "Save" button to download a transparent version of your custom pet, or click the "New Tab" button towards the right to open the picture of the pet in a new tab. Remember to rotate to horizontal if you're on mobile for easier viewing!
+</p>
+<br>
+<div class="subhead" id="usage">Usage Policy</div>
+<p>You can freely use these customizers and the pet files generated from them as long as you use them appropriately, credit me (such as leaving the watermark untouched), and don't attempt to profit off of my work in any way. Thanks for understanding!</p>
+<br>
+<div class="subhead">Feedback</div>
+<p>Have any questions, comments, or suggestions? Feel free to leave a message on <a href="https://aj-item-worth.fandom.com/wiki/Message_Wall:BrightSunshine" target="_blank">my Wall</a>. </p><br>
+</div>
+</body>
+</html>
