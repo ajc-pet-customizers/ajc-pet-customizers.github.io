@@ -101,7 +101,7 @@ body {
 
 .button_grid {
   display:grid;
-  grid-gap: 8%;
+  grid-gap: 4%;
   grid-template-columns: 40% 40%;
   grid-template-rows: auto;
   justify-content: center;
@@ -151,8 +151,29 @@ body {
 
 .b2:hover {
   background-image:linear-gradient(to right,#b3ff75, #75ffe8,#75daff,#d89eff);
-background: 
+  background: 
      linear-gradient(to right, #b3ff75, #75ffe8,#75daff,#d89eff) border-box;
+}
+
+.b3 {
+  position:relative;
+  left:56%;
+  margin-bottom:6%;
+  margin-top:4%;
+  background: 
+     linear-gradient(white,white) padding-box,
+     linear-gradient(to right, #fff875, #b3ff75, #75ffe8) border-box;
+}
+
+.b3:hover {
+  background-image:linear-gradient(to right,#b3ff75, #75ffe8,#75daff,#d89eff);
+  background: 
+     linear-gradient(to right, #fff875, #b3ff75, #75ffe8) border-box;
+}
+
+.b3:active {
+  box-shadow: 3px 3px 3px rgba(64, 64, 64,0.5);
+  transform: translateY(6px);
 }
 
 p {
@@ -218,6 +239,7 @@ a:hover {
 <div class="button_grid">
 <button class="button b1 text_outline" onclick="location.href='https://ajc-pet-customizers.github.io/hopper';"><img src="assets/rainbow hopper outlined.png" alt="hopper" width="30%" height ="auto">Hopper</button>
 <button class="button b2 text_outline" onclick="location.href='https://ajc-pet-customizers.github.io/phantom';"><img src="assets/rainbow phantom outline.png" alt="phantom" width="30%" height ="auto">Phantom</button>
+<button class="button b3 text_outline" onclick="location.href='https://ajc-pet-customizers.github.io/firefly';"><img src="assets/rainbow fly outlined.png" alt="firefly" width="30%" height ="auto">Firefly</button>
 </div>
 <div class="subhead">About</div>
 <p>
