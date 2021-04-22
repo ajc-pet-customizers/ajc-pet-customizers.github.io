@@ -54,7 +54,7 @@ body {
 .container {
   display:grid;
   position:absolute;
-  top:11vw;
+  top:calc(5vh + 9vw);
   width:100%;
 }
 
@@ -69,11 +69,11 @@ body {
   color: #3b3b3b;
   font-family: b;
   width:100%;
-  height: 8vw;
+  height: calc(4.5vh + 6vw);
   top: 0px;
   left: 0px;
   position:fixed;
-  font-size:5.2vw;
+  font-size: calc(2vh + 60px);
   align-items: center;
   justify-content: center;
   padding: 2%;
@@ -102,7 +102,7 @@ body {
 
 .button_grid {
   display:grid;
-  grid-gap: 4%;
+  grid-gap: 6% 3%;
   grid-template-columns: 40% 40%;
   grid-template-rows: auto;
   justify-content: center;
@@ -110,6 +110,7 @@ body {
   padding: 2.5%;
   width:100%;
   height:auto;
+  margin-bottom:calc(25px + 1.5vh);
 }
 
 .button {
@@ -119,7 +120,7 @@ body {
   justify-content: center;
   align-items: center;
   font-family: body;
-  font-size: 3.7vw;
+  font-size: calc(40px + .25vw);
   color:#3b3b3b;
   border-radius:100px;
   border: 8px solid transparent;
@@ -180,7 +181,7 @@ body {
 p {
   font-family:body;
   color:#3b3b3b;
-  font-size:2.3vw;
+  font-size:calc(23.5px + 1vh);
   margin:1% 10%;
   text-align:center;
   line-height: 1.6;
@@ -188,7 +189,7 @@ p {
 
 .subhead {
   font-family:belle;
-  font-size:3.7vw;
+  font-size:calc(42px + 1vh);
   color:#3b3b3b;
   text-align:center;
 }
@@ -241,6 +242,7 @@ a:hover {
 <button class="button b1 text_outline" onclick="location.href='https://ajc-pet-customizers.github.io/hopper';"><img src="assets/rainbow hopper outlined.png" alt="hopper" width="30%" height ="auto">Hopper</button>
 <button class="button b2 text_outline" onclick="location.href='https://ajc-pet-customizers.github.io/phantom';"><img src="assets/rainbow phantom outline.png" alt="phantom" width="30%" height ="auto">Phantom</button>
 <button class="button b3 text_outline" onclick="location.href='https://ajc-pet-customizers.github.io/firefly';"><img src="assets/rainbow fly outlined.png" alt="firefly" width="30%" height ="auto">Firefly</button>
+<!-- <button class="button b2 text_outline" onclick="location.href='https://ajc-pet-customizers.github.io/mantis';"><img src="assets/rainbow mantis outline.png" alt="mantis" width="30%" height ="auto">Mantis</button> -->
 </div>
 <div class="subhead">About</div>
 <p>
@@ -250,15 +252,15 @@ Welcome! This website contains pet customizers created by me, <a href="https://a
 <div class="subhead">Navigation & Features </div>
 <p>
 Use the respective buttons to select features for the pet.
-<br><span style="font-size:150%;">﹎</span><br>
+<br><span style="font-size:100%">━</span><br>
 Main button functions, from left to right:
 <br>
-<!--<i class="material-icons">file_download</i> --><b>Save button</b>: downloads a transparent, high quality image of your custom pet
-<br><!--<i class="material-icons">open_in_new</i> --><b>New Tab button</b>: opens a larger picture of the pet in a new tab
-<br><!--<i class="material-icons">shuffle</i> --><b>Randomize button</b>: randomly generates a feature combination for you
-<br><!--<i class="material-icons">invert_colors</i> --><b>Contrast button</b>: toggles between a lighter and darker background paper
-<br><span style="font-size:150%;">﹊</span><br>
-Remember to rotate to horizontal if you're on mobile for easier viewing!
+<b>Save button</b>: downloads a transparent, high quality image of your custom pet
+<br><i class="material-icons">open_in_new</i> <b>New Tab button</b>: opens a larger picture of the pet in a new tab
+<br><i class="material-icons">shuffle</i> <b>Randomize button</b>: randomly generates a feature combination for you
+<br>◑ <b>Contrast button</b>: toggles between a lighter and darker background paper
+<br><span style="font-size:100%">━</span><br>
+Remember to rotate to horizontal if you're on mobile for better viewing!
 </p>
 <br>
 <div class="subhead" id="usage">Usage Policy</div>
