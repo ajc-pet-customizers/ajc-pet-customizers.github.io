@@ -5,6 +5,7 @@
 <link rel="icon" type="image/png" href="assets/favicon-32x32.png" sizes="32x32" />
 <link rel="icon" type="image/png" href="assets/favicon-16x16.png" sizes="16x16" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
 
 <style>
 @font-face {
@@ -73,7 +74,7 @@ body {
   top: 0px;
   left: 0px;
   position:fixed;
-  font-size: calc(2vh + 60px);
+  font-size: min(calc(2vh + 60px),calc(4.5vh + 4.5vw));
   align-items: center;
   justify-content: center;
   padding: 2%;
@@ -102,15 +103,15 @@ body {
 
 .button_grid {
   display:grid;
-  grid-gap: 6% 3%;
+  grid-gap: 11% 3%;
   grid-template-columns: 40% 40%;
   grid-template-rows: auto;
   justify-content: center;
-  align-content: center;
+  align-items: center;
   padding: 2.5%;
   width:100%;
   height:auto;
-  margin-bottom:calc(25px + 1.5vh);
+  margin-bottom:calc(42px + .8vh);
 }
 
 .button {
@@ -120,7 +121,7 @@ body {
   justify-content: center;
   align-items: center;
   font-family: body;
-  font-size: calc(40px + .25vw);
+  font-size: min(calc(40px + .25vw), calc(3.5vw + 3.5vh));
   color:#3b3b3b;
   border-radius:100px;
   border: 8px solid transparent;
@@ -168,7 +169,7 @@ body {
 }
 
 .b3:hover {
-  background-image:linear-gradient(to right,#b3ff75, #75ffe8,#75daff,#d89eff);
+  background-image:linear-gradient(to right,#fff875, #b3ff75, #75ffe8);
   background: 
      linear-gradient(to right, #fff875, #b3ff75, #75ffe8) border-box;
 }
@@ -181,7 +182,7 @@ body {
 p {
   font-family:body;
   color:#3b3b3b;
-  font-size:calc(23.5px + 1vh);
+  font-size: min(calc(23.5px + 1vh),calc(2vh + 2vw));
   margin:1% 10%;
   text-align:center;
   line-height: 1.6;
@@ -189,7 +190,7 @@ p {
 
 .subhead {
   font-family:belle;
-  font-size:calc(42px + 1vh);
+  font-size: min(calc(42px + 1vh),calc(3vw + 3vh));
   color:#3b3b3b;
   text-align:center;
 }
@@ -231,6 +232,81 @@ a:hover {
   box-shadow: inset 5px 0 1000px rgba(255,255,255,.3); 
 }
 
+.feature_grid {
+  display:grid;
+  grid-gap: 5% 3%;
+  grid-template-columns: 22% 22% 22%;
+  grid-template-rows: auto;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  position:relative;
+  margin-top:1%;
+  margin-bottom:1.5%;
+}
+
+.feature {
+  border-radius: 50%;
+  width: 13vw;
+  height: 13vw;
+  background-color: white;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  position:relative;
+  left:19%;
+  border: 8px solid transparent;
+  box-shadow: 3px 3px 3px rgba(163, 163, 163,0.5);
+  font-family: body;
+  font-size: min(calc(40px + .25vw), calc(3.5vw + 3.5vh));
+  color:#3b3b3b;
+  
+}
+
+.f1 {
+  background: 
+     linear-gradient(white,white) padding-box,
+     linear-gradient(to right,#ff8080, #ffc375, #fff875) border-box;
+}
+
+.f1:hover {
+    background-image:linear-gradient(to right,#ff8080, #ffc375, #fff875);
+  background: 
+     linear-gradient(to right,#ff8080, #ffc375, #fff875) border-box;
+}
+
+.f2 {
+  background: 
+     linear-gradient(white,white) padding-box,
+     linear-gradient(to right,#fff875, #b3ff75, #75ffe8) border-box;
+}
+
+.f2:hover {
+    background-image:linear-gradient(to right,#fff875, #b3ff75, #75ffe8);
+  background: 
+     linear-gradient(to right,#fff875, #b3ff75, #75ffe8) border-box;
+}
+
+.f3 {
+  background: 
+     linear-gradient(white,white) padding-box,
+     linear-gradient(to right,#75ffe8,#75daff,#d89eff) border-box;
+}
+
+.f3:hover {
+    background-image:linear-gradient(to right,#75ffe8,#75daff,#d89eff);
+  background: 
+     linear-gradient(to right,#75ffe8,#75daff,#d89eff) border-box;
+}
+
+.ftext {
+  font-family:body;
+  color:#3b3b3b;
+  font-size: min(calc(15px + .5vw + .7vh),calc(1.5vh + 1.5vw));
+  text-align:center;
+  line-height: 1.6;
+}
+
 </style>
 </head>
 
@@ -241,8 +317,8 @@ a:hover {
 <div class="button_grid">
 <button class="button b1 text_outline" onclick="location.href='https://ajc-pet-customizers.github.io/hopper';"><img src="assets/rainbow hopper outlined.png" alt="hopper" width="30%" height ="auto">Hopper</button>
 <button class="button b2 text_outline" onclick="location.href='https://ajc-pet-customizers.github.io/phantom';"><img src="assets/rainbow phantom outline.png" alt="phantom" width="30%" height ="auto">Phantom</button>
-<button class="button b3 text_outline" onclick="location.href='https://ajc-pet-customizers.github.io/firefly';"><img src="assets/rainbow fly outlined.png" alt="firefly" width="30%" height ="auto">Firefly</button>
-<!-- <button class="button b2 text_outline" onclick="location.href='https://ajc-pet-customizers.github.io/mantis';"><img src="assets/rainbow mantis outline.png" alt="mantis" width="30%" height ="auto">Mantis</button> -->
+<button class="button b1 text_outline" onclick="location.href='https://ajc-pet-customizers.github.io/firefly';"><img src="assets/rainbow fly outlined.png" alt="firefly" width="30%" height ="auto">Firefly</button>
+<button class="button b2 text_outline" onclick="location.href='https://ajc-pet-customizers.github.io/mantis';"><img src="assets/rainbow mantis outline.png" alt="mantis" width="30%" height ="auto">Mantis</button>
 </div>
 <div class="subhead">About</div>
 <p>
@@ -250,21 +326,36 @@ Welcome! This website contains pet customizers created by me, <a href="https://a
 </p>
 <br>
 <div class="subhead">Navigation & Features </div>
+<p>Use the respective buttons to select features for the pet.
+<br>Remember to rotate to horizontal if you're on mobile for better viewing!
+<br><span style="font-size:100%">━</span>
+<br>Key Features:
+<div class="feature_grid">
+<div class="feature f1 text_outline"><i class="material-icons" style="font-size:min(calc(70px + .25vw), calc(4.5vw + 4.5vh))">money_off</i></div>
+<div class="feature f2 text_outline"><i class="material-icons" style="font-size:min(calc(70px + .25vw), calc(4.5vw + 4.5vh))">link</i></div>
+<div class="feature f3 text_outline"><i class="material-icons-outlined" style="font-size:min(calc(70px + .25vw), calc(4.5vw + 4.5vh))">task</i></div>
+<span class="ftext"><b>Completely free</b>, no ads or analytics</span>
+<span class="ftext"><b>Easy access</b>: just a link away</span>
+<span class="ftext"><b>High quality source files</b>, down to the pixel</span>
+<div class="feature f1 text_outline"><i class="material-icons" style="font-size:min(calc(70px + .25vw), calc(4.5vw + 4.5vh))">auto_fix_normal</i></div>
+<div class="feature f2 text_outline"><i class="material-icons" style="font-size:min(calc(70px + .25vw), calc(4.5vw + 4.5vh))">bolt</i></div>
+<div class="feature f3 text_outline"><i class="material-icons-outlined" style="font-size:min(calc(70px + .25vw), calc(4.5vw + 4.5vh))">lightbulb</i></div>
+<span class="ftext"><b>Accurate edits</b>: gradient work, color tested, precise placements</span>
+<span class="ftext"><b>Instant results</b>, as fast as your connection permits</span>
+<span class="ftext"><b>Specially designed buttons</b> to maximize your experience</span>
+</div>
 <p>
-Use the respective buttons to select features for the pet.
 <br><span style="font-size:100%">━</span><br>
-Main button functions, from left to right:
+Button Functions:
 <br>
 <b>Save button</b>: downloads a transparent, high quality image of your custom pet
-<br><i class="material-icons">open_in_new</i> <b>New Tab button</b>: opens a larger picture of the pet in a new tab
-<br><i class="material-icons">shuffle</i> <b>Randomize button</b>: randomly generates a feature combination for you
+<br><i class="material-icons" style="font-size:min(calc(23.5px + 1vh),calc(2vh + 2vw))">open_in_new</i> <b>New Tab button</b>: opens a larger picture of the pet in a new tab
+<br><i class="material-icons" style="font-size:min(calc(23.5px + 1vh),calc(2vh + 2vw))">shuffle</i> <b>Randomize button</b>: randomly generates a feature combination for you
 <br>◑ <b>Contrast button</b>: toggles between a lighter and darker background paper
-<br><span style="font-size:100%">━</span><br>
-Remember to rotate to horizontal if you're on mobile for better viewing!
 </p>
 <br>
 <div class="subhead" id="usage">Usage Policy</div>
-<p>You can freely use these customizers and the pet files generated from them as long as you use them appropriately, credit me (such as leaving the watermark untouched), and don't attempt to profit off of my work in any way. Thanks for understanding!</p>
+<p>You can freely use these customizers and the pet files generated from them as long as you credit me appropriately and don't attempt to profit off of my work in any way. Thanks for understanding!</p>
 <br>
 <div class="subhead">Feedback</div>
 <p>Have any questions, comments, or suggestions? Feel free to leave a message on <a href="https://aj-item-worth.fandom.com/wiki/Message_Wall:BrightSunshine" target="_blank">my Wall</a>. </p><br>
