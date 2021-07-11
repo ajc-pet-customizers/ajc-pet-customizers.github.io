@@ -103,15 +103,16 @@ body {
 
 .button_grid {
   display:grid;
-  grid-gap: 11% 3%;
-  grid-template-columns: 40% 40%;
-  grid-template-rows: auto;
+  grid-gap: 3% 3%;
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: 30% 30%;
   justify-content: center;
   align-items: center;
   padding: 2.5%;
   width:100%;
-  height:auto;
+  height:160%;
   margin-bottom:calc(42px + .8vh);
+  margin-top:-1%;
 }
 
 .button {
@@ -123,10 +124,11 @@ body {
   font-family: body;
   font-size: min(calc(40px + .25vw), calc(3.5vw + 3.5vh));
   color:#3b3b3b;
-  border-radius:100px;
+  border-radius:calc(50px + 5vh);
   border: 8px solid transparent;
   box-shadow: 3px 3px 3px rgba(163, 163, 163,0.5);
   cursor:pointer;
+  height:calc(12vw + 1.5vh);
 }
 
 .button:active {
@@ -137,44 +139,55 @@ body {
 .b1 {
   background: 
      linear-gradient(white,white) padding-box,
-     linear-gradient(to right,#ff8080, #ffc375, #fff875, #b3ff75) border-box;
+     linear-gradient(to right,#ff8080, #ffc375, #fff875) border-box;
 }
 
 .b1:hover {
-  background-image:linear-gradient(to right,#ff8080, #ffc375, #fff875, #b3ff75);
+  background-image:linear-gradient(to right,#ff8080, #ffc375, #fff875);
   background: 
-     linear-gradient(to right,#ff8080, #ffc375, #fff875, #b3ff75) border-box;
+     linear-gradient(to right,#ff8080, #ffc375, #fff875) border-box;
 }
 
 .b2 {
   background: 
      linear-gradient(white,white) padding-box,
-     linear-gradient(to right, #b3ff75, #75ffe8,#75daff,#d89eff) border-box;
+     linear-gradient(to right,#fff875, #b3ff75, #75ffe8) border-box;
 }
 
 .b2:hover {
-  background-image:linear-gradient(to right,#b3ff75, #75ffe8,#75daff,#d89eff);
+  background-image:linear-gradient(to right,#fff875, #b3ff75, #75ffe8);
   background: 
-     linear-gradient(to right, #b3ff75, #75ffe8,#75daff,#d89eff) border-box;
+     linear-gradient(to right,#fff875, #b3ff75, #75ffe8) border-box;
 }
 
 .b3 {
+  background: 
+     linear-gradient(white,white) padding-box,
+     linear-gradient(to right,#75ffe8,#75daff,#d89eff) border-box;
+}
+
+.b3:hover {
+  background-image:linear-gradient(to right,#75ffe8,#75daff,#d89eff);
+  background: 
+     linear-gradient(to right,#75ffe8,#75daff,#d89eff) border-box;
+}
+
+.b4 {
   position:relative;
   left:56%;
   margin-bottom:6%;
-  margin-top:4%;
   background: 
      linear-gradient(white,white) padding-box,
      linear-gradient(to right, #fff875, #b3ff75, #75ffe8) border-box;
 }
 
-.b3:hover {
+.b4:hover {
   background-image:linear-gradient(to right,#fff875, #b3ff75, #75ffe8);
   background: 
      linear-gradient(to right, #fff875, #b3ff75, #75ffe8) border-box;
 }
 
-.b3:active {
+.b4:active {
   box-shadow: 3px 3px 3px rgba(64, 64, 64,0.5);
   transform: translateY(6px);
 }
@@ -317,12 +330,13 @@ a:hover {
 <div class="button_grid">
 <button class="button b1 text_outline" onclick="location.href='https://ajc-pet-customizers.github.io/hopper';"><img src="assets/rainbow hopper outlined.png" alt="hopper" width="30%" height ="auto">Hopper</button>
 <button class="button b2 text_outline" onclick="location.href='https://ajc-pet-customizers.github.io/phantom';"><img src="assets/rainbow phantom outline.png" alt="phantom" width="30%" height ="auto">Phantom</button>
-<button class="button b1 text_outline" onclick="location.href='https://ajc-pet-customizers.github.io/firefly';"><img src="assets/rainbow fly outlined.png" alt="firefly" width="30%" height ="auto">Firefly</button>
-<button class="button b2 text_outline" onclick="location.href='https://ajc-pet-customizers.github.io/mantis';"><img src="assets/rainbow mantis outline.png" alt="mantis" width="30%" height ="auto">Mantis</button>
+<button class="button b3 text_outline" onclick="location.href='https://ajc-pet-customizers.github.io/firefly';"><img src="assets/rainbow fly outlined.png" alt="firefly" width="30%" height ="auto">Firefly</button>
+<button class="button b1 text_outline" onclick="location.href='https://ajc-pet-customizers.github.io/mantis';"><img src="assets/rainbow mantis outline.png" alt="mantis" width="30%" height ="auto">Mantis</button>
+<button class="button b2 text_outline" onclick="location.href='https://ajc-pet-customizers.github.io/ladybug';"><img src="assets/rainbow ladybug outlined.png" alt="ladybug" width="30%" height ="auto">Ladybug</button>
 </div>
 <div class="subhead">About</div>
 <p>
-Welcome! This website contains pet customizers created by me, <a href="https://aj-item-worth.fandom.com/wiki/User:BrightSunshine" target="_blank">BrightSunshine</a>, for use with the game Animal Jam Classic. They're completely safe and free to use, but please look over the <a href="#usage">Usage Policy</a> below for my conditions before continuing. I'm always working on adding more so stay tuned! ^-^
+Welcome! This website contains pet customizers created by me, <a href="https://aj-item-worth.fandom.com/wiki/User:BrightSunshine" target="_blank">BrightSunshine</a>, for use with the game Animal Jam Classic. They're completely safe and free to use, but please look over the <a href="#usage">Usage Policy</a> below for my conditions before continuing. I'm always working on adding more (follow my <a href="https://www.instagram.com/bright.sunshine.aj/" target="_blank">Instagram</a> for updates), so stay tuned! ^-^
 </p>
 <br>
 <div class="subhead">Navigation & Features </div>
