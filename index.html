@@ -8,6 +8,43 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
 
 <style>
+#loader {
+  z-index: 10000;
+  width: 120px;
+  height: 120px;
+  border: 16px solid transparent;
+  border-radius: 50%;
+    background: 
+     linear-gradient(white,white) padding-box,
+     linear-gradient(to bottom,#ff8080, #ffc375, #fff875, #b3ff75, #75ffe8,#75daff,#d89eff) border-box;
+  -webkit-animation: spin .5s linear infinite;
+  animation: spin .5s linear infinite;
+}
+
+#loading_container {
+  background-color:white;
+  top:0;
+  left:0;
+  position:fixed;
+  width:100vw; 
+  height:100vh;
+  z-index:9990;
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(180deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(180deg); }
+}
+
 @font-face {
   font-family: b;
   src: url("fonts/brownies cake.ttf");
@@ -323,7 +360,10 @@ a:hover {
 </style>
 </head>
 
-<body>
+<body onload="loaded()">
+<div id = "loading_container">
+<div id="loader"></div>
+</div>
 <div class="container">
 <div class="header text_outline"><span style="font-family:doodle;font-size:80%">Y</span>AJC Pet Customizers<span style="font-family:doodle;font-size:80%">Z</span></div>
 <div class="subhead">Current Customizers</div>
@@ -375,4 +415,14 @@ Button Functions:
 <p>Have any questions, comments, or suggestions? Feel free to leave a message on <a href="https://aj-item-worth.fandom.com/wiki/Message_Wall:BrightSunshine" target="_blank">my Wall</a>. </p><br>
 </div>
 </body>
+<script>
+var myVar;
+function loaded() {
+  myVar = setTimeout(showPage, 500);
+}
+
+function showPage() {
+  document.getElementById("loading_container").style.display = "none";
+}
+</script>
 </html>
